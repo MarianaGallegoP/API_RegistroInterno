@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "API_RegistroInterno.Controllers.UsuarioClientesExternosController",
+    "Method": "Get",
+    "RelativePath": "api/UsuarioClientesExternos/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

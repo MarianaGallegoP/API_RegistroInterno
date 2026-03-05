@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Migrations\\20260305162425_Primera Migracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_RegistroInterno\\Migrations\\20260305162425_Primera Migracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\entities\\usuarioclientesexternos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\entities\\usuarioclientesexternos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\entities\\logauditorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\entities\\logauditorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\entities\\sesionregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\entities\\sesionregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|c:\\users\\mgallego\\onedrive - progresi\u00F3n scb s.a\\escritorio\\progresiondigital\\api_registrointerno\\api_registrointerno_dev\\api_registrointerno\\api_registrointerno\\controllers\\usuarioclientesexternoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3376E2B-CC9D-42A4-A20D-9264F5D5204A}|API_RegistroInterno\\API_RegistroInterno.csproj|solutionrelative:api_registrointerno\\controllers\\usuarioclientesexternoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Program.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Program.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Program.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T16:17:40.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\appsettings.json",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\appsettings.json",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\appsettings.json",
-              "RelativeToolTip": "API_RegistroInterno\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-05T16:14:49.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20260305162425_Primera Migracion.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Migrations\\20260305162425_Primera Migracion.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Migrations\\20260305162425_Primera Migracion.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Migrations\\20260305162425_Primera Migracion.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Migrations\\20260305162425_Primera Migracion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Title": "UsuarioClientesExternosController.cs",
+              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
+              "RelativeDocumentMoniker": "API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
+              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
+              "RelativeToolTip": "API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T16:24:25.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:49:24.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioClientesExternos.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\UsuarioClientesExternos.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Entities\\UsuarioClientesExternos.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\UsuarioClientesExternos.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Entities\\UsuarioClientesExternos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:32:55.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LogAuditorias.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\LogAuditorias.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Entities\\LogAuditorias.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\LogAuditorias.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Entities\\LogAuditorias.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:35:07.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SesionRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\SesionRegistro.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Entities\\SesionRegistro.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\SesionRegistro.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Entities\\SesionRegistro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:34:39.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "API_RegistroInterno\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Entities\\Usuario.cs",
-              "RelativeToolTip": "API_RegistroInterno\\Entities\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T15:33:37.229Z",
+              "WhenOpened": "2026-03-05T16:55:46.474Z",
               "EditorCaption": ""
             }
           ]
