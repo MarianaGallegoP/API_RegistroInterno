@@ -28,10 +28,10 @@ namespace API_RegistroInterno.Controllers
         public async Task<ActionResult<RegistrarUsuarioClienteExternoResponse>> Registrar([FromBody] RegistrarUsuarioClienteExternoRequest request)
         {
             if (request == null)
-                return BadRequest(new RegistrarUsuarioClienteExternoResponse { Exito = false, Mensaje = "Cuerpo de la petición inválido.", Codigo = "REQUEST_INVALIDO" });
+                return BadRequest(new RegistrarUsuarioClienteExternoResponse { Success = false, Message = "Cuerpo de la petición inválido.", Code = "BAD_REQUEST" });
 
             if (!DateTime.TryParseExact(request.FechaExpedicion.Trim(), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime fechaExpedicion))
-                return BadRequest(new RegistrarUsuarioClienteExternoResponse { Exito = false, Mensaje = "Formato de fecha_expedicion inválido. Use dd/MM/yyyy.", Codigo = "FECHA_INVALIDA" });
+                return BadRequest(new RegistrarUsuarioClienteExternoResponse { Success = false, Message = "Formato de fecha_expedicion inválido. Use dd/MM/yyyy.", Code = "FECHA_INVALIDA" });
 
             var tipoDoc = request.TipoDocumento?.Trim() ?? "";
             var numDoc = request.NumeroDocumento?.Trim() ?? "";
@@ -45,27 +45,42 @@ namespace API_RegistroInterno.Controllers
             if (yaEnExternos)
                 return Ok(new RegistrarUsuarioClienteExternoResponse
                 {
-                    Exito = true,
-                    Mensaje = "El usuario ya se encuentra registrado en tblUsuariosClientesExternos.",
-                    Codigo = "YA_REGISTRADO"
+                    Success = true,
+                    Code = "USER_ALREADY_EXISTS",
+                    Message = "El usuario ya esta registrado",
+                    VerificationMethod = "Metodo de verificacion",
+                    RegistrationToken = "token de registro",
+                    ValidationSessionId = "id de validacion de sesion",
+                    ExpiresIn = 60,
+                    PhoneMasked = request.Celular
                 });
 
             var existeEnClientes = await _data.ExisteEnClientesAsync(tipoDoc, numDoc, fechaExpedicion, nombres, apellido1, apellido2, celular, correo);
             if (!existeEnClientes)
                 return Ok(new RegistrarUsuarioClienteExternoResponse
                 {
-                    Exito = false,
-                    Mensaje = "El usuario no se encuentra en tblClientes (DbOyD). No es posible registrarlo en tblUsuariosClientesExternos.",
-                    Codigo = "NO_EN_TBL_CLIENTES"
+                    Success = true,
+                    Code = "USER_NOT_FOUND_IN_SYSTEM",
+                    Message = "Usuario no escontrado en el sistema",
+                    VerificationMethod = "Metodo de verificacion",
+                    RegistrationToken = "token de registro",
+                    ValidationSessionId = "id de validacion de sesion",
+                    ExpiresIn = 60,
+                    PhoneMasked = request.Celular
                 });
 
             await _data.RegistrarAsync(tipoDoc, numDoc, fechaExpedicion, nombres, apellido1, apellido2, celular, correo);
 
             return Ok(new RegistrarUsuarioClienteExternoResponse
             {
-                Exito = true,
-                Mensaje = "Usuario registrado correctamente en tblUsuariosClientesExternos.",
-                Codigo = "REGISTRADO"
+                Success = true,
+                Code = "REGISTRATION_SUCCESS",
+                Message = "El usuario ha sido registrado",
+                VerificationMethod = "Metodo de verificacion",
+                RegistrationToken = "token de registro",
+                ValidationSessionId = "id de validacion de sesion",
+                ExpiresIn = 60,
+                PhoneMasked = request.Celular
             });
         }
     }

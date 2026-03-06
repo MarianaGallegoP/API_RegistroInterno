@@ -109,14 +109,34 @@
       "RegistrarUsuarioClienteExternoResponse": {
         "type": "object",
         "properties": {
-          "exito": {
+          "success": {
             "type": "boolean"
           },
-          "mensaje": {
+          "code": {
             "type": "string",
             "nullable": true
           },
-          "codigo": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "verification_method": {
+            "type": "string",
+            "nullable": true
+          },
+          "registration_token": {
+            "type": "string",
+            "nullable": true
+          },
+          "validation_session_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "expires_in": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "phone_masked": {
             "type": "string",
             "nullable": true
           }
