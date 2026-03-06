@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using API_RegistroInterno.Context;
+using API_RegistroInterno.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddDbContext<OyDDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaConexionOyD")));
+
+builder.Services.AddScoped<UsuarioClientesExternosData>();
 
 var app = builder.Build();
 
