@@ -10,9 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaConexion"))
-);
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaConexion")));
+
+builder.Services.AddDbContext<OyDDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaConexionOyD")));
 
 var app = builder.Build();
 

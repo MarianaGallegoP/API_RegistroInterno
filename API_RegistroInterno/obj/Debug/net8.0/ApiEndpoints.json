@@ -8,5 +8,31 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_RegistroInterno.Controllers.UsuarioClientesExternosController",
+    "Method": "Registrar",
+    "RelativePath": "api/UsuarioClientesExternos/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "API_RegistroInterno.Models.RegistrarUsuarioClienteExternoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "API_RegistroInterno.Models.RegistrarUsuarioClienteExternoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

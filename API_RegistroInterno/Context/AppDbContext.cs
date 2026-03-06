@@ -1,4 +1,4 @@
-﻿using API_RegistroInterno.Entities;
+using API_RegistroInterno.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace API_RegistroInterno.Context
@@ -57,7 +57,7 @@ namespace API_RegistroInterno.Context
 
                 entity.Property(e => e.clave)
                                 .HasColumnName("vchClave")
-                                .IsRequired();
+                                .HasColumnType("varbinary(max)");
 
                 entity.Property(e => e.intentosFallidos)
                                 .HasColumnName("intIntentosFallidos");

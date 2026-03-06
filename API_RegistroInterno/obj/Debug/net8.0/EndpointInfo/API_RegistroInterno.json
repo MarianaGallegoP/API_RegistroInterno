@@ -16,7 +16,113 @@
           }
         }
       }
+    },
+    "/api/UsuarioClientesExternos/Registrar": {
+      "post": {
+        "tags": [
+          "UsuarioClientesExternos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarUsuarioClienteExternoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarUsuarioClienteExternoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarUsuarioClienteExternoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarUsuarioClienteExternoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarUsuarioClienteExternoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarUsuarioClienteExternoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "RegistrarUsuarioClienteExternoRequest": {
+        "type": "object",
+        "properties": {
+          "tipo_documento": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_documento": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_expedicion": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "primer_apellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "segundo_apellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "celular": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrarUsuarioClienteExternoResponse": {
+        "type": "object",
+        "properties": {
+          "exito": {
+            "type": "boolean"
+          },
+          "mensaje": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }
