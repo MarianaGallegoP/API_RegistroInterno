@@ -4,6 +4,7 @@ namespace API_RegistroInterno.Models
 {
     /// <summary>
     /// Respuesta del endpoint de registro de usuario cliente externo.
+    /// Soporta respuesta OTP (phone_masked, expires_in) o QUESTIONS (questions).
     /// </summary>
     public class RegistrarUsuarioClienteExternoResponse
     {
@@ -26,9 +27,15 @@ namespace API_RegistroInterno.Models
         public string ValidationSessionId { get; set; } = string.Empty;
 
         [JsonPropertyName("expires_in")]
-        public int ExpiresIn { get; set; } = 0;
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public int? ExpiresIn { get; set; }
 
         [JsonPropertyName("phone_masked")]
-        public string PhoneMasked { get; set; } = string.Empty;
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? PhoneMasked { get; set; }
+
+        [JsonPropertyName("questions")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<VerificationQuestion>? Questions { get; set; }
     }
 }

@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "API_RegistroInterno\\Data\\UsuarioClientesExternosData.cs",
               "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Data\\UsuarioClientesExternosData.cs",
               "RelativeToolTip": "API_RegistroInterno\\Data\\UsuarioClientesExternosData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T19:18:05.872Z",
               "EditorCaption": ""
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
               "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
               "RelativeToolTip": "API_RegistroInterno\\Controllers\\UsuarioClientesExternosController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAzwDUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T19:18:04.309Z",
               "EditorCaption": ""
@@ -62,9 +62,10 @@
               "RelativeDocumentMoniker": "API_RegistroInterno\\Models\\RegistrarUsuarioClienteExternoResponse.cs",
               "ToolTip": "C:\\Users\\mgallego\\OneDrive - Progresi\u00F3n SCB S.A\\Escritorio\\ProgresionDigital\\API_RegistroInterno\\API_RegistroInterno_Dev\\API_RegistroInterno\\API_RegistroInterno\\Models\\RegistrarUsuarioClienteExternoResponse.cs",
               "RelativeToolTip": "API_RegistroInterno\\Models\\RegistrarUsuarioClienteExternoResponse.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA0wCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T19:12:36.302Z"
+              "WhenOpened": "2026-03-06T19:12:36.302Z",
+              "EditorCaption": ""
             }
           ]
         }
