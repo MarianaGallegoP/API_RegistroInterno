@@ -43,7 +43,7 @@ namespace API_RegistroInterno.Controllers
 
             var yaEnExternos = await _data.ExisteEnUsuariosExternosAsync(tipoDoc, numDoc, fechaExpedicion, nombres, apellido1, apellido2, celular, correo);
             if (yaEnExternos)
-                return Ok(new RegistrarUsuarioClienteExternoResponse
+                return Conflict(new RegistrarUsuarioClienteExternoResponse
                 {
                     Success = true,
                     Code = "USER_ALREADY_EXISTS",
@@ -57,7 +57,7 @@ namespace API_RegistroInterno.Controllers
 
             var existeEnClientes = await _data.ExisteEnClientesAsync(tipoDoc, numDoc, fechaExpedicion, nombres, apellido1, apellido2, celular, correo);
             if (!existeEnClientes)
-                return Ok(new RegistrarUsuarioClienteExternoResponse
+                return Conflict(new RegistrarUsuarioClienteExternoResponse
                 {
                     Success = true,
                     Code = "USER_NOT_FOUND_IN_SYSTEM",
