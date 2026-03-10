@@ -1,6 +1,7 @@
 using API_RegistroInterno.Data;
-using API_RegistroInterno.Entities;
 using API_RegistroInterno.Models;
+using API_RegistroInterno.Models.IdentityValidation;
+using API_RegistroInterno.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 
@@ -11,10 +12,12 @@ namespace API_RegistroInterno.Controllers
     public class UsuarioClientesExternosController : ControllerBase
     {
         private readonly UsuarioClientesExternosData _data;
+        private readonly IIdentityValidationService _identityValidation;
 
-        public UsuarioClientesExternosController(UsuarioClientesExternosData data)
+        public UsuarioClientesExternosController(UsuarioClientesExternosData data, IIdentityValidationService identityValidation)
         {
             _data = data;
+            _identityValidation = identityValidation;
         }
 
         [HttpGet]
@@ -63,16 +66,41 @@ namespace API_RegistroInterno.Controllers
                     Message = "Usuario no encontrado en el sistema."
                 });
 
-            // Validación exitosa: elegir aleatoriamente OTP o Cuestionario
-            var metodoVerificacion = Random.Shared.Next(2) == 0 ? "OTP" : "QUESTIONS";
+            // Llamada a la plataforma interna de validación de identidad (backend to backend)
+            var identityRequest = new IdentityValidationRequest
+            {
+                TipoDocumento = tipoDoc,
+                NumeroDocumento = numDoc,
+                FechaExpedicion = request.FechaExpedicion.Trim(),
+                Nombres = nombres,
+                PrimerApellido = apellido1,
+                SegundoApellido = apellido2,
+                Celular = celular,
+                Correo = correo
+            };
+
+            var identityResponse = await _identityValidation.ValidateIdentityAsync(identityRequest);
+
+            // Mapear códigos de fallo de la plataforma interna a códigos de la API de registro interno
+            if (identityResponse == null || !IsValidationSuccess(identityResponse.Status))
+            {
+                var (code, message) = MapIdentityErrorToResponse(identityResponse?.Status);
+                return BadRequest(new RegistrarUsuarioClienteExternoResponse
+                {
+                    Success = false,
+                    Code = code,
+                    Message = message
+                });
+            }
+
+            // Respuesta positiva: OTP o QUESTIONS según lo que devolvió la plataforma
             var registrationToken = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
-            var validationSessionId = "sess-internal-" + Guid.NewGuid().ToString("N")[..12];
+            var validationSessionId = identityResponse.ValidationSessionId ?? "sess-internal-" + Guid.NewGuid().ToString("N")[..12];
+            var verificationMethod = identityResponse.VerificationMethod ?? "OTP";
 
             RegistrarUsuarioClienteExternoResponse response;
-
-            if (metodoVerificacion == "OTP")
+            if (string.Equals(verificationMethod, "OTP", StringComparison.OrdinalIgnoreCase))
             {
-                var phoneMasked = RegistrarUsuarioClienteExternoResponse.EnmascararCelular(celular);
                 response = new RegistrarUsuarioClienteExternoResponse
                 {
                     Success = true,
@@ -81,13 +109,12 @@ namespace API_RegistroInterno.Controllers
                     VerificationMethod = "OTP",
                     RegistrationToken = registrationToken,
                     ValidationSessionId = validationSessionId,
-                    ExpiresIn = 60,
-                    PhoneMasked = phoneMasked
+                    ExpiresIn = identityResponse.ExpiresIn ?? 60,
+                    PhoneMasked = identityResponse.PhoneMasked ?? RegistrarUsuarioClienteExternoResponse.EnmascararCelular(celular)
                 };
             }
             else
             {
-                var questions = RegistrarUsuarioClienteExternoResponse.ObtenerPreguntasCuestionario();
                 response = new RegistrarUsuarioClienteExternoResponse
                 {
                     Success = true,
@@ -96,14 +123,31 @@ namespace API_RegistroInterno.Controllers
                     VerificationMethod = "QUESTIONS",
                     RegistrationToken = registrationToken,
                     ValidationSessionId = validationSessionId,
-                    Questions = questions
+                    Questions = identityResponse.Questions
                 };
             }
 
-            // Registrar usuario solo después de elegir el método y armar la respuesta
+            // Registrar usuario solo después de respuesta positiva de la plataforma interna
             await _data.RegistrarAsync(tipoDoc, numDoc, fechaExpedicion, nombres, apellido1, apellido2, celular, correo);
 
             return Ok(response);
+        }
+
+        private static bool IsValidationSuccess(string status)
+        {
+            return string.Equals(status, "VALIDATION_SUCCESS_OTP", StringComparison.OrdinalIgnoreCase)
+                   || string.Equals(status, "VALIDATION_SUCCESS_QUESTIONS", StringComparison.OrdinalIgnoreCase);
+        }
+
+        private static (string Code, string Message) MapIdentityErrorToResponse(string? platformStatus)
+        {
+            return (platformStatus?.ToUpperInvariant()) switch
+            {
+                "VALIDATION_FAILED" => ("IDENTITY_VALIDATION_FAILED", "La validación de identidad no fue exitosa."),
+                "DATA_MISMATCH" => ("IDENTITY_DATA_MISMATCH", "Los datos no coinciden con los registrados."),
+                "SERVICE_ERROR" => ("INTERNAL_SERVER_ERROR", "Error en el servicio de validación. Intente más tarde."),
+                _ => ("INTERNAL_SERVER_ERROR", "Error en el servicio de validación. Intente más tarde.")
+            };
         }
     }
 }

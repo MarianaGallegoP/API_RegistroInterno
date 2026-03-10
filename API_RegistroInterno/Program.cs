@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using API_RegistroInterno.Context;
 using API_RegistroInterno.Data;
+using API_RegistroInterno.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,10 @@ builder.Services.AddDbContext<OyDDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaConexionOyD")));
 
 builder.Services.AddScoped<UsuarioClientesExternosData>();
+
+builder.Services.Configure<IdentityValidationOptions>(
+    builder.Configuration.GetSection(IdentityValidationOptions.SectionName));
+builder.Services.AddHttpClient<IIdentityValidationService, IdentityValidationService>();
 
 var app = builder.Build();
 
