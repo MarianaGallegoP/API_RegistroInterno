@@ -1,4 +1,5 @@
 using API_RegistroInterno.Data;
+using API_RegistroInterno.Entities;
 using API_RegistroInterno.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
@@ -71,7 +72,7 @@ namespace API_RegistroInterno.Controllers
 
             if (metodoVerificacion == "OTP")
             {
-                var phoneMasked = EnmascararCelular(celular);
+                var phoneMasked = RegistrarUsuarioClienteExternoResponse.EnmascararCelular(celular);
                 response = new RegistrarUsuarioClienteExternoResponse
                 {
                     Success = true,
@@ -86,7 +87,7 @@ namespace API_RegistroInterno.Controllers
             }
             else
             {
-                var questions = ObtenerPreguntasCuestionario();
+                var questions = RegistrarUsuarioClienteExternoResponse.ObtenerPreguntasCuestionario();
                 response = new RegistrarUsuarioClienteExternoResponse
                 {
                     Success = true,
@@ -103,50 +104,6 @@ namespace API_RegistroInterno.Controllers
             await _data.RegistrarAsync(tipoDoc, numDoc, fechaExpedicion, nombres, apellido1, apellido2, celular, correo);
 
             return Ok(response);
-        }
-
-        /// <summary>
-        /// Enmascara el celular mostrando solo los primeros 3 y últimos 3 dígitos (ej: 300****567).
-        /// </summary>
-        private static string EnmascararCelular(string celular)
-        {
-            if (string.IsNullOrEmpty(celular) || celular.Length < 7)
-                return "**********";
-            return celular[..3] + "****" + celular[^3..];
-        }
-
-        /// <summary>
-        /// Devuelve las preguntas de verificación para el método QUESTIONS.
-        /// </summary>
-        private static List<VerificationQuestion> ObtenerPreguntasCuestionario()
-        {
-            return new List<VerificationQuestion>
-            {
-                new VerificationQuestion
-                {
-                    Id = "Q1",
-                    Question = "¿En qué ciudad nació?",
-                    Options = new List<VerificationQuestionOption>
-                    {
-                        new() { Id = "A", Text = "Bogotá" },
-                        new() { Id = "B", Text = "Medellín" },
-                        new() { Id = "C", Text = "Cali" },
-                        new() { Id = "D", Text = "Barranquilla" }
-                    }
-                },
-                new VerificationQuestion
-                {
-                    Id = "Q2",
-                    Question = "¿Cuál fue su primer trabajo?",
-                    Options = new List<VerificationQuestionOption>
-                    {
-                        new() { Id = "A", Text = "Empresa privada" },
-                        new() { Id = "B", Text = "Sector público" },
-                        new() { Id = "C", Text = "Independiente" },
-                        new() { Id = "D", Text = "Otro" }
-                    }
-                }
-            };
         }
     }
 }

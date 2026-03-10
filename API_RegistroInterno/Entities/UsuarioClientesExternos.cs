@@ -1,3 +1,5 @@
+using API_RegistroInterno.Models;
+
 namespace API_RegistroInterno.Entities
 {
     public class UsuarioClientesExternos
