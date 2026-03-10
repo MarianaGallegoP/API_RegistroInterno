@@ -26,7 +26,7 @@ namespace API_RegistroInterno.Controllers
         }
 
         [HttpPost]
-        [Route("Registrar")]
+        [Route("/api/auth/register/init")]
         public async Task<ActionResult<RegistrarUsuarioClienteExternoResponse>> Registrar([FromBody] RegistrarUsuarioClienteExternoRequest request)
         {
             if (request == null)

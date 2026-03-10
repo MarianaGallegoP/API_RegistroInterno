@@ -1,18 +1,8 @@
 [
   {
     "ContainingType": "API_RegistroInterno.Controllers.UsuarioClientesExternosController",
-    "Method": "Get",
-    "RelativePath": "api/UsuarioClientesExternos/Lista",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API_RegistroInterno.Controllers.UsuarioClientesExternosController",
     "Method": "Registrar",
-    "RelativePath": "api/UsuarioClientesExternos/Registrar",
+    "RelativePath": "api/auth/register/init",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -34,5 +24,15 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "API_RegistroInterno.Controllers.UsuarioClientesExternosController",
+    "Method": "Get",
+    "RelativePath": "api/UsuarioClientesExternos/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/UsuarioClientesExternos/Registrar": {
+    "/api/auth/register/init": {
       "post": {
         "tags": [
           "UsuarioClientesExternos"
